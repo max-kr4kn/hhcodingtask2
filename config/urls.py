@@ -21,6 +21,10 @@ urlpatterns = [
     ),
     url(r"^accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+    url(
+        r"^generic_model/",
+        include("hhcodingtask.generic_model.urls", namespace="generic_model"),
+    ),
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
 )

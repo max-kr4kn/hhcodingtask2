@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Generic Model -> Create{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <form class="form-horizontal" method="POST" action="{% url 'generic_model:create' %}">
+        {% csrf_token %}
+        <p>{{ form.as_p }}</p>
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn">Create</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

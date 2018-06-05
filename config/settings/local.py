@@ -17,8 +17,12 @@ ALLOWED_HOSTS = [
 # DATABASES
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'hhcodingtask.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'localhost',
+        'PORT': 5432,
+        'NAME': 'hh_test_db',
+        'USER': 'local_user',
+        'PASSWORD': '123'
     }
 }
 
@@ -70,3 +74,10 @@ INSTALLED_APPS += ['django_extensions']  # noqa F405
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+# Scheme (works with str, int, float)
+SCHEME = {
+    'age': int,
+    'type': str,
+    'name': str,
+    'rate': float
+}
